@@ -6,14 +6,14 @@ Enter number n: 143
 The number 143 factors as prime factors: p = 11, q = 13
 ```
 
-## 2. *solver.py* скрипт покруче, он решает такое уравнение (m^d)mod(F(n)) где m, d, F(n) вводим ручками, нужно как в задачках rsa так и Протоколе Диффи-Хеллмана
+## 2. *solver.py* скрипт покруче, он решает такое уравнение (x^y)mod(z) где x, y, z вводим ручками, нужно как в задачках rsa так и Протоколе Диффи-Хеллмана (как выяснислось, в питоне есть готовая штука, pow(base, exp, mod), ох уж этот питон с готовыми решениями на все случаи жизни)
 
 ```
-Welcome to the (m^d) mod F(n) computation program!
+Welcome to the (x^y) mod z computation program!
 
-Enter m: 234
-Enter d: 233
-Enter F(n): 546
+Enter x: 234
+Enter y: 233
+Enter z: 546
 
 Result: (234^233) % 546 = 390
 ```
