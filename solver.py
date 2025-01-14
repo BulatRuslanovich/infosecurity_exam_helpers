@@ -1,23 +1,23 @@
-def modular_exponentiation(m, d, fn):
+def modular_exponentiation(x, y, z):
     result = 1
-    base = m % fn
+    base = x % z
 
     step = 1
-    while d > 0:
-        if d % 2 == 1:
-            result = (result * base) % fn
+    while y > 0:
+        if y % 2 == 1:
+            result = (result * base) % z
        
-        base = (base * base) % fn
-        d //= 2
+        base = (base * base) % z
+        y //= 2
         step += 1
 
     return result
 
 
-print("Welcome to the (m^d) mod F(n) computation program!\n")
-m = int(input("Enter m: " ))
-d = int(input("Enter d: " ))
-fn = int(input("Enter F(n): "))
+print("Welcome to the (x^y) mod z computation program!\n")
+x = int(input("Enter x: " ))
+y = int(input("Enter y: " ))
+z = int(input("Enter z: "))
 
-result = modular_exponentiation(m, d, fn)
-print(f"\nResult: ({m}^{d}) % {fn} = {result}" )
+result = modular_exponentiation(x, y, z)
+print(f"\nResult: ({x}^{y}) % {z} = {result}" )
